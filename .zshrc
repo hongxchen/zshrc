@@ -45,7 +45,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx terminalapp)
+plugins=(git osx terminalapp)
 
 # User configuration
 
@@ -55,7 +55,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -65,10 +66,10 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -78,10 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# language
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 
 #proxy
 # export http_proxy="http://127.0.0.1:8103"
@@ -93,7 +90,7 @@ export EDITOR=emacs
 # emacs daemon
 # export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -t'
-alias em='emacs-24.4'
+alias em='emacs-24.5'
 
 # golang
 export GOPATH=/usr/local/opt/go/bin
@@ -110,6 +107,13 @@ fi
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# gnu-tar
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+# gnu-sed
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+
 alias ls='gls --color=auto'
 alias dir='gdir --color=auto'
 alias grep='grep --color=auto'
@@ -120,15 +124,24 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 
+# WebRTC
+export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
+
+# UNP
+export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
+
+#dnvm
+source /usr/local/bin/dnvm.sh
+
 # android
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.4/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.4/templates
+export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
