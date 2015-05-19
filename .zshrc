@@ -137,15 +137,17 @@ source /usr/local/bin/dnvm.sh
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/moongame/ProjectBK/client/tools/cocos2d-console/bin
+## export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/templates
+export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/moongame/ProjectBK/client/templates
+## export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/usr/local/opt/android-ndk
+export NDK_ROOT=/usr/local/opt/android-ndk-r9d
 export PATH=$NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
