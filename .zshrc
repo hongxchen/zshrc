@@ -133,28 +133,23 @@ export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/
 #dnvm
 source /usr/local/bin/dnvm.sh
 
-# android
-export ANDROID_HOME=/usr/local/opt/android-sdk
+# ccache
+export USE_CCACHE=1
+export NDK_CCACHE=/usr/local/bin/ccache
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/moongame/ProjectBK/client/tools/cocos2d-console/bin
-## export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=/Users/hongxchen/Documents/Workspace/cocos2d-x/cocos2d-x-3.2/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/moongame/ProjectBK/client/templates
-## export COCOS_TEMPLATES_ROOT=$HOME/Documents/Workspace/cocos2d-x/cocos2d-x-3.6/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
 export NDK_ROOT=/usr/local/opt/android-ndk-r9d
 export PATH=$NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
+export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/24.2
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
 # Add environment variable ANT_ROOT for cocos2d-x
-export ANT_ROOT=/usr/local/opt/ant/libexec/bin
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
 export PATH=$ANT_ROOT:$PATH
