@@ -88,7 +88,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 export EDITOR=emacs
 
 # emacs daemon
-# export ALTERNATE_EDITOR=""
+export ALTERNATE_EDITOR=""
 alias emacs='emacsclient -t'
 alias em='emacs-24.5'
 
