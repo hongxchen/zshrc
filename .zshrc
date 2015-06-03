@@ -45,12 +45,12 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx terminalapp)
+plugins=(git osx)
 
 # User configuration
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+export PATH=/usr/local/opt/ccache/libexec:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
+export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -142,7 +142,7 @@ export COCOS_CONSOLE_ROOT=/Users/hongxchen/Documents/Workspace/cocos2d-x/cocos2d
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/usr/local/opt/android-ndk-r9d
+export NDK_ROOT=/usr/local/opt/android-ndk
 export PATH=$NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
