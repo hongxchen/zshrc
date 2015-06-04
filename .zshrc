@@ -142,7 +142,7 @@ export COCOS_CONSOLE_ROOT=/Users/hongxchen/Documents/Workspace/cocos2d-x/cocos2d
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/usr/local/opt/android-ndk
+export NDK_ROOT=/usr/local/opt/android-ndk-r9d
 export PATH=$NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
