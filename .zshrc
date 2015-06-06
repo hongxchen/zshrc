@@ -133,6 +133,9 @@ export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/
 #dnvm
 source /usr/local/bin/dnvm.sh
 
+# thefuck
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
+
 # ccache
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/local/bin/ccache
