@@ -136,6 +136,9 @@ source /usr/local/bin/dnvm.sh
 # thefuck
 alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 
+# locate
+alias locate='locate -i -d /var/db/locate.database'
+
 # ccache
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/local/bin/ccache
