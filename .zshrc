@@ -45,7 +45,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx)
+plugins=(git osx brew)
 
 # User configuration
 
@@ -88,9 +88,9 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 export EDITOR=emacs
 
 # emacs daemon
-export ALTERNATE_EDITOR=""
-alias emacs='emacsclient -t'
-alias em='emacs-24.5'
+# export ALTERNATE_EDITOR=""
+# alias emacs='emacsclient -t'
+# alias em='emacs-24.5'
 
 # golang
 export GOPATH=/usr/local/opt/go/bin
