@@ -80,17 +80,12 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#proxy
-# export http_proxy="http://127.0.0.1:8103"
-# export https_proxy="http://127.0.0.1:8103"
-# alias curl="curl -x http://127.0.0.1:8103"
-
 export EDITOR=emacs
 
 # emacs daemon
-export ALTERNATE_EDITOR=""
-alias emacs='emacsclient -t'
-alias em='emacs-24.5'
+# export ALTERNATE_EDITOR=""
+# alias emacs='emacsclient -t'
+# alias em='emacs-24.5'
 
 # golang
 export GOPATH=/usr/local/opt/go/bin
@@ -116,7 +111,7 @@ MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 alias ls='gls --color=auto'
 alias dir='gdir --color=auto'
-alias grep='grep --color=auto'
+alias grep='ggrep --color=auto'
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -125,10 +120,10 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 
 # WebRTC
-export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
+# export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # UNP
-export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
+# export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
 
 #dnvm
 source /usr/local/bin/dnvm.sh
