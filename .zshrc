@@ -49,7 +49,7 @@ plugins=(git osx brew)
 
 # User configuration
 
-export PATH=/usr/local/opt/ccache/libexec:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -138,6 +138,8 @@ alias locate='locate -i -d /var/db/locate.database'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 
 # ccache
+export CCACHE_ROOT=usr/local/opt/ccache/libexec
+export PATH=$CCACHE_ROOT:$PATH
 export USE_CCACHE=1
 export NDK_CCACHE=/usr/local/bin/ccache
 
@@ -147,6 +149,9 @@ export ANDROID_NDK=/usr/local/opt/android-ndk
 # Android SDK
 export ANDROID_SDK=/usr/local/opt/android-sdk
 
+# Android toolchains
+export TOOLCHAINS_ROOT=/usr/local/opt/android-ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin
+export PATH=$TOOLCHAINS_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/yiyou/youybs-client/cocos2d/tools/cocos2d-console/bin
