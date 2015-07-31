@@ -144,13 +144,13 @@ export USE_CCACHE=1
 export NDK_CCACHE=/usr/local/bin/ccache
 
 # Android NDK
-export ANDROID_NDK=/usr/local/opt/android-ndk
+export ANDROID_NDK=/usr/local/opt/android-ndk-r9d
 
 # Android SDK
 export ANDROID_SDK=/usr/local/opt/android-sdk
 
 # Android toolchains
-export TOOLCHAINS_ROOT=/usr/local/opt/android-ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin
+export TOOLCHAINS_ROOT=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin
 export PATH=$TOOLCHAINS_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
