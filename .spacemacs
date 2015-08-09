@@ -40,7 +40,7 @@
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(swiper)
+   dotspacemacs-additional-packages '()
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -67,8 +67,6 @@ before layers configuration."
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed.
    dotspacemacs-startup-banner 'official
-   ;; better company auto completion
-   auto-completion-enable-sort-by-usage t
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
    dotspacemacs-startup-lists '(recents projects)
@@ -172,10 +170,9 @@ before layers configuration."
 layers configuration."
   ;; (global-company-mode t)
   (add-hook 'prog-mode-hook #'linum-mode)
-  (global-set-key (kbd "C-S") 'swiper)
   (set-variable 'ycmd-server-command '("python" "/Users/hongxchen/Documents/Kits/ycmd/ycmd"))
-  (set-variable 'ycmd-global-config "/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/.ycm_extra_conf.py")
-  (set-variable 'ycmd-extra-conf-whitelist '("/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/*"))
+  ;; (set-variable 'ycmd-global-config "/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/.ycm_extra_conf.py")
+  ;; (set-variable 'ycmd-extra-conf-whitelist '("/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/*"))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
