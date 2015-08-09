@@ -17,31 +17,30 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup t)
      better-defaults
      emacs-lisp
-     osx
-     (colors :variables
-            colors-enable-nyan-cat-progress-bar t)
-     (git :variables
-          git-magit-status-fullscreen t)
+     git
      markdown
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; syntax-checking
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     syntax-checking
      version-control
-     python
-     gtags
-     lua
-     erlang
+     osx
+     ycmd
+     yasnippet
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages then consider to create a layer, you can also put the
    ;; configuration in `dotspacemacs/config'.
-   dotspacemacs-additional-packages '(mwe-log-commands swiper)
+   dotspacemacs-additional-packages '(swiper)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -68,6 +67,8 @@ before layers configuration."
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed.
    dotspacemacs-startup-banner 'official
+   ;; better company auto completion
+   auto-completion-enable-sort-by-usage t
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
    dotspacemacs-startup-lists '(recents projects)
@@ -127,7 +128,7 @@ before layers configuration."
    dotspacemacs-fullscreen-at-startup nil
    ;; If non nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX."
-   dotspacemacs-fullscreen-use-non-native t
+   dotspacemacs-fullscreen-use-non-native nil
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (Emacs 24.4+ only)
@@ -169,12 +170,12 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  (global-company-mode t)
+  ;; (global-company-mode t)
   (add-hook 'prog-mode-hook #'linum-mode)
   (global-set-key (kbd "C-S") 'swiper)
-  (evil-leader/set-key
-    "oll" 'mwe:log-keyboard-commands
-    "olf" 'mwe:open-command-log-buffer)
+  (set-variable 'ycmd-server-command '("python" "/Users/hongxchen/Documents/Kits/ycmd/ycmd"))
+  (set-variable 'ycmd-global-config "/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/.ycm_extra_conf.py")
+  (set-variable 'ycmd-extra-conf-whitelist '("/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/*"))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
