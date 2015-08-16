@@ -129,8 +129,7 @@ eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 source /usr/local/bin/dnvm.sh
 
 # thefuck
-# alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
-eval "$(thefuck-alias)"
+eval "$(thefuck --alias)"
 
 # locate
 alias locate='locate -i -d /var/db/locate.database'
