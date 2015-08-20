@@ -17,8 +17,7 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t)
+     auto-completion
      better-defaults
      emacs-lisp
      git
@@ -27,14 +26,13 @@
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
+     spell-checking
      syntax-checking
      version-control
      osx
-     ycmd
-     yasnippet
      (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
+            c-c++-default-mode-for-headers 'c++-mode)
+     lua
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -55,8 +53,10 @@ before layers configuration."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
-   ;; Either `vim' or `emacs'. Evil is always enabled but if the variable
-   ;; is `emacs' then the `holy-mode' is enabled at startup.
+   ;; One of `vim', `emacs' or `hybrid'. Evil is always enabled but if the
+   ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
+   ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
+   ;; unchanged.
    dotspacemacs-editing-style 'vim
    ;; If non nil output loading progress in `*Messages*' buffer.
    dotspacemacs-verbose-loading nil
@@ -130,7 +130,7 @@ before layers configuration."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'.
@@ -168,12 +168,23 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  ;; (global-company-mode t)
-  (add-hook 'prog-mode-hook #'linum-mode)
-  (set-variable 'ycmd-server-command '("python" "/Users/hongxchen/Documents/Kits/ycmd/ycmd"))
-  ;; (set-variable 'ycmd-global-config "/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/.ycm_extra_conf.py")
-  ;; (set-variable 'ycmd-extra-conf-whitelist '("/Users/hongxchen/Documents/Workspace/yiyou/youybs-client/*"))
+  (global-company-mode t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (toc-org smeargle shell-pop reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl htmlize helm-gitignore helm-flyspell helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help disaster company-statistics company-quickhelp company-c-headers cmake-mode clang-format auto-yasnippet ac-ispell auto-complete pos-tip company flycheck yasnippet request gitignore-mode magit magit-popup git-commit with-editor markdown-mode alert log4e gntp macrostep elisp-slime-nav diff-hl window-numbering which-key volatile-highlights vi-tilde-fringe use-package spray spacemacs-theme smooth-scrolling rfringe rainbow-delimiters quelpa powerline popwin pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-unicode helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))

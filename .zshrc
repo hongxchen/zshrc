@@ -99,15 +99,15 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
 fi
 
 # coreutils
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # gnu-tar
-PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # gnu-sed
-PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 alias ls='gls --color=auto'
 alias dir='gdir --color=auto'
@@ -136,6 +136,9 @@ alias locate='locate -i -d /var/db/locate.database'
 
 # cpplint
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
+
+export LUA_ROOT=$HOME/Documents/Kits/cloudwu/lua/install
+export PATH=$LUA_ROOT/bin:$PATH
 
 # ccache
 export CCACHE_ROOT=usr/local/opt/ccache/libexec
