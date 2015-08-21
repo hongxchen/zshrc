@@ -94,9 +94,9 @@ export GOPATH=/usr/local/opt/go/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # bash-complete
-if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
-    . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
-fi
+# if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
+#     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
+# fi
 
 # coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -112,6 +112,7 @@ export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 alias ls='gls --color=auto'
 alias dir='gdir --color=auto'
 alias grep='ggrep --color=auto'
+alias cat='ccat'
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
