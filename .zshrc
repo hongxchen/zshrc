@@ -109,10 +109,13 @@ export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
+# alias
 alias ls='gls --color=auto'
 alias dir='gdir --color=auto'
 alias grep='ggrep --color=auto'
 alias cat='ccat'
+alias locate='locate -i -d /var/db/locate.database'
+alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -131,12 +134,6 @@ source /usr/local/bin/dnvm.sh
 
 # thefuck
 eval "$(thefuck --alias)"
-
-# locate
-alias locate='locate -i -d /var/db/locate.database'
-
-# cpplint
-alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 
 export LUA_ROOT=$HOME/Documents/Kits/cloudwu/lua/install
 export PATH=$LUA_ROOT/bin:$PATH
