@@ -31,7 +31,8 @@
      version-control
      osx
      (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode)
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      lua
      erlang
      go
