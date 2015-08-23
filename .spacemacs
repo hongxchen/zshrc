@@ -26,17 +26,19 @@
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
+     ;; spell-checking
      syntax-checking
      version-control
      osx
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
+     gtags
      lua
      erlang
      go
-     gtags
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
+     (python :variables
+             python-enable-yapf-format-on-save t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -184,7 +186,7 @@ layers configuration."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit magit-popup quelpa go-eldoc helm helm-core avy flycheck evil-terminal-cursor-changer erlang company-go go-mode hexrgb helm-gtags ggtags toc-org smeargle shell-pop reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl htmlize helm-gitignore helm-flyspell helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help disaster company-statistics company-quickhelp company-c-headers cmake-mode clang-format auto-yasnippet ac-ispell auto-complete pos-tip company yasnippet request gitignore-mode git-commit with-editor markdown-mode alert log4e gntp macrostep elisp-slime-nav diff-hl window-numbering which-key volatile-highlights vi-tilde-fringe use-package spray spacemacs-theme smooth-scrolling rfringe rainbow-delimiters powerline popwin pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-unicode helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
+    (pyvenv pytest pyenv-mode pip-requirements hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode json-rpc pythonic f shell-pop package-build helm-core magit-popup magit quelpa go-eldoc helm avy flycheck evil-terminal-cursor-changer erlang company-go go-mode hexrgb helm-gtags ggtags toc-org smeargle reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl htmlize helm-gitignore helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help disaster company-statistics company-quickhelp company-c-headers cmake-mode clang-format auto-yasnippet ac-ispell auto-complete pos-tip company yasnippet request gitignore-mode git-commit with-editor markdown-mode alert log4e gntp macrostep elisp-slime-nav diff-hl window-numbering which-key volatile-highlights vi-tilde-fringe use-package spray spacemacs-theme smooth-scrolling rfringe rainbow-delimiters powerline popwin pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-unicode helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
