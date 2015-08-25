@@ -17,7 +17,8 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-snippets-in-popup)
      better-defaults
      emacs-lisp
      git
@@ -31,12 +32,12 @@
      version-control
      osx
      gtags
+     ycmd
      lua
      erlang
      go
      (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
+            c-c++-default-mode-for-headers 'c++-mode)
      (python :variables
              python-enable-yapf-format-on-save t)
      )
@@ -174,6 +175,11 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (set-variable 'ycmd-server-command `("python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd/ycmd/__main__.py")))
+  (setq company-backends-c-mode-common '((company-c-headers
+                                          company-ycmd
+                                          company-dabbrev-code
+                                          company-dabbrev :with company-yasnippet) company-files))
   (global-company-mode t)
 )
 
@@ -186,7 +192,7 @@ layers configuration."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (pyvenv pytest pyenv-mode pip-requirements hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode json-rpc pythonic f shell-pop package-build helm-core magit-popup quelpa go-eldoc avy flycheck evil-terminal-cursor-changer erlang company-go go-mode hexrgb helm-gtags ggtags toc-org smeargle reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl htmlize helm-gitignore helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help disaster company-statistics company-quickhelp company-c-headers cmake-mode clang-format auto-yasnippet ac-ispell auto-complete pos-tip company yasnippet request gitignore-mode git-commit markdown-mode alert log4e gntp macrostep elisp-slime-nav diff-hl window-numbering which-key volatile-highlights vi-tilde-fringe use-package spray spacemacs-theme smooth-scrolling rfringe rainbow-delimiters powerline popwin pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-unicode helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
+    (helm-c-yasnippet company-statistics company-quickhelp auto-yasnippet ac-ispell auto-complete pos-tip yasnippet flycheck-ycmd company-ycmd ycmd deferred pytest helm-make helm helm-core parent-mode magit magit-popup git-commit with-editor dash company-go avy pyvenv pyenv-mode pip-requirements hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode json-rpc pythonic f shell-pop package-build quelpa go-eldoc flycheck evil-terminal-cursor-changer erlang go-mode hexrgb helm-gtags ggtags toc-org smeargle reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl htmlize helm-gitignore gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help disaster company-c-headers cmake-mode clang-format company request gitignore-mode markdown-mode alert log4e gntp macrostep elisp-slime-nav diff-hl window-numbering which-key volatile-highlights vi-tilde-fringe use-package spray spacemacs-theme smooth-scrolling rfringe rainbow-delimiters powerline popwin pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-unicode helm-themes helm-swoop helm-projectile helm-mode-manager helm-descbinds helm-ag google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
