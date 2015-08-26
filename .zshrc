@@ -116,7 +116,6 @@ alias grep='ggrep --color=auto'
 alias cat='ccat'
 alias locate='locate -i -d /var/db/locate.database'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
-alias emacs='/usr/bin/open -a /Applications/Emacs.app'
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
