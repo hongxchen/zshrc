@@ -138,6 +138,12 @@ eval "$(thefuck --alias)"
 export LUA_ROOT=$HOME/Documents/Kits/cloudwu/lua/install
 export PATH=$LUA_ROOT/bin:$PATH
 
+# Mono
+export MONO_GAC_PREFIX="/usr/local"
+
+# LLVM
+export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
+
 # ccache
 export CCACHE_ROOT=usr/local/opt/ccache/libexec
 export PATH=$CCACHE_ROOT:$PATH

@@ -17,8 +17,7 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (auto-completion :variables
-                      auto-completion-enable-snippets-in-popup t)
+     auto-completion
      better-defaults
      emacs-lisp
      git
@@ -31,7 +30,6 @@
      syntax-checking
      version-control
      osx
-     gtags
      ycmd
      lua
      erlang
@@ -175,12 +173,7 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  (set-variable 'ycmd-server-command `("python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd/__main__.py")))
-  (setq company-backends-c-mode-common '((company-c-headers
-                                          company-ycmd
-                                          company-dabbrev-code
-                                          company-dabbrev :with company-yasnippet) company-files))
-  (global-company-mode t)
+  (set-variable 'ycmd-server-command `("python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd")))
   (add-hook 'c-mode-hook 'ycmd-mode)
   (add-hook 'c++-mode-hook 'ycmd-mode)
 )
@@ -194,7 +187,7 @@ layers configuration."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (toc-org smeargle shell-pop reveal-in-osx-finder pyvenv pytest pyenv-mode pip-requirements pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl hy-mode htmlize helm-pydoc helm-gtags helm-gitignore helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger ggtags flycheck-ycmd flycheck-pos-tip evil-org eshell-prompt-extras esh-help erlang disaster cython-mode company-ycmd company-statistics company-quickhelp company-c-headers company-anaconda cmake-mode clang-format auto-yasnippet ac-ispell auto-complete anaconda-mode json-rpc pos-tip company ycmd flycheck yasnippet request gitignore-mode magit magit-popup git-commit with-editor markdown-mode alert log4e gntp pythonic deferred f macrostep elisp-slime-nav diff-hl window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rfringe rainbow-delimiters powerline popwin popup pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link avy names anzu iedit smartparens highlight hexrgb flx projectile helm helm-core async parent-mode spinner pkg-info epl evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme))))
+    (helm-ag helm magit evil quelpa helm-core with-editor dash mmm-mode markdown-mode flycheck-ycmd company-ycmd ycmd deferred pyvenv pytest pyenv-mode pip-requirements lua-mode hy-mode helm-pydoc erlang disaster cython-mode company-c-headers company-anaconda cmake-mode clang-format anaconda-mode json-rpc pythonic f toc-org smeargle shell-pop reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term markdown-toc magit-gitflow launchctl htmlize helm-gitignore helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help company-statistics company-quickhelp auto-yasnippet ac-ispell auto-complete pos-tip company flycheck yasnippet request gitignore-mode magit-popup git-commit alert log4e gntp macrostep elisp-slime-nav diff-hl window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rfringe rainbow-delimiters powerline popwin popup pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds google-translate golden-ratio gh-md fringe-helper flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link avy names anzu iedit smartparens highlight flx projectile async parent-mode spinner pkg-info epl evil-leader which-key package-build use-package bind-key s spacemacs-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
