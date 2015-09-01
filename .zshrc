@@ -11,7 +11,7 @@ ZSH_THEME="ys"
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -64,6 +64,7 @@ export LC_ALL=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
+export EDITOR=emacs
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -79,8 +80,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-export EDITOR=emacs
 
 # emacs daemon
 # export ALTERNATE_EDITOR=""
@@ -129,9 +128,10 @@ eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 # UNP
 # export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
 
-#dnvm
+# dnvm
 source /usr/local/bin/dnvm.sh
 
+# Lua
 export LUA_ROOT=$HOME/Documents/Kits/cloudwu/lua/install
 export PATH=$LUA_ROOT/bin:$PATH
 
