@@ -132,9 +132,6 @@ eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 #dnvm
 source /usr/local/bin/dnvm.sh
 
-# thefuck
-eval "$(thefuck --alias)"
-
 export LUA_ROOT=$HOME/Documents/Kits/cloudwu/lua/install
 export PATH=$LUA_ROOT/bin:$PATH
 
