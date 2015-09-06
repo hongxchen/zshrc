@@ -64,7 +64,7 @@ export LC_ALL=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR=emacs
+export EDITOR=vim
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -80,6 +80,11 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# HELP
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
 
 # emacs daemon
 # export ALTERNATE_EDITOR=""
