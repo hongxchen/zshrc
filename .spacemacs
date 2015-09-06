@@ -3,7 +3,9 @@
 ;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
-  "Configuration Layers declaration."
+  "Configuration Layers declaration.
+You should not put any user code in this function besides modifying the variable
+values."
   (setq-default
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
@@ -53,7 +55,9 @@
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
-before layers configuration."
+before layers configuration.
+You should not put any user code in there besides modifying the variable
+values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
@@ -116,6 +120,8 @@ before layers configuration."
    ;; `find-files' (SPC f f), `find-spacemacs-file' (SPC f e s), and
    ;; `find-contrib-file' (SPC f e c) are replaced.
    dotspacemacs-use-ido nil
+   ;; If non nil, `helm' will try to miminimize the space it uses."
+   dotspacemacs-helm-resize nil
    ;; If non nil the paste micro-state is enabled. When enabled pressing `p`
    ;; several times cycle between the kill ring content.
    dotspacemacs-enable-paste-micro-state nil
@@ -165,14 +171,18 @@ before layers configuration."
    ;; specified with an installed package.
    ;; Not used for now.
    dotspacemacs-default-package-repository nil
-   )
-  ;; User initialization goes here
+   ))
+
+(defun dotspacemacs/user-init ()
+  "Initialization function for user code.
+It is called immediately after `dotspacemacs/init'.  You are free to put any
+user code."
   )
 
-(defun dotspacemacs/config ()
-  "Configuration function.
+(defun dotspacemacs/user-config ()
+  "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
-layers configuration."
+layers configuration. You are free to put any user code."
   (set-variable 'ycmd-server-command `("python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd")))
   (add-hook 'c-mode-hook 'ycmd-mode)
   (add-hook 'c++-mode-hook 'ycmd-mode)
@@ -181,18 +191,3 @@ layers configuration."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (neotree magit with-editor which-key helm gh-md expand-region evil-escape markdown-mode aggressive-indent ace-link helm-projectile flycheck projectile helm-swoop helm-core macrostep evil-jumper json-rpc helm-ag evil quelpa dash mmm-mode flycheck-ycmd company-ycmd ycmd deferred pyvenv pytest pyenv-mode pip-requirements lua-mode hy-mode helm-pydoc erlang disaster cython-mode company-c-headers company-anaconda cmake-mode clang-format anaconda-mode pythonic f toc-org smeargle shell-pop reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term markdown-toc magit-gitflow launchctl htmlize helm-gitignore helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-pos-tip evil-org eshell-prompt-extras esh-help company-statistics company-quickhelp auto-yasnippet ac-ispell auto-complete pos-tip company yasnippet request gitignore-mode magit-popup git-commit alert log4e gntp elisp-slime-nav diff-hl window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rfringe rainbow-delimiters powerline popwin popup pcre2el paradox page-break-lines open-junk-file move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-mode-manager helm-make helm-descbinds google-translate golden-ratio fringe-helper flx-ido fill-column-indicator fancy-battery exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-indent-textobject evil-iedit-state evil-exchange evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary adaptive-wrap ace-window avy names anzu iedit smartparens highlight flx async parent-mode spinner pkg-info epl evil-leader package-build use-package bind-key s))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
