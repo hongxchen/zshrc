@@ -163,7 +163,7 @@ export TOOLCHAINS_ROOT=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuil
 export PATH=$TOOLCHAINS_ROOT:$PATH
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/yiyou/youybs-client/cocos2d/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/yiyou/yybs-client/cocos2d/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
