@@ -9,7 +9,7 @@ values."
   (setq-default
    ;; Base distribution to use. This is a layer contained in the directory
    ;; `!distribution'. For now available distributions are `spacemacs-core'
-   ;; or `spacemacs'. (default 'spacemacs)
+   ;; or `spacemacs'. (default 'spacemacs-core)
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
@@ -40,7 +40,8 @@ values."
      lua
      erlang
      (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode)
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      (python :variables
              python-enable-yapf-format-on-save t)
      )
@@ -198,16 +199,20 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
+  (set-variable 'ycmd-server-command `("python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd")))
+  (add-hook 'c-mode-hook 'ycmd-mode)
+  (add-hook 'c++-mode-hook 'ycmd-mode)
+  (setq ad-redefinition-action 'accept)
+  (global-set-key [C-M-tab] 'clang-format-region)
+  (add-hook 'c++-mode-hook 'clang-format-bindings)
+  (defun clang-format-bindings ()
+    (define-key c++-mode-map [tab] 'clang-format-buffer))
   )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
  This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (set-variable 'ycmd-server-command `("python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd")))
-  (add-hook 'c-mode-hook 'ycmd-mode)
-  (add-hook 'c++-mode-hook 'ycmd-mode)
-  (setq ad-redefinition-action 'accept)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -219,7 +224,7 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (anaconda-mode helm magit async gnuplot diff-hl helm-ag avy helm-core evil-escape projectile evil which-key toc-org smeargle shell-pop reveal-in-osx-finder pyvenv pytest pyenv-mode pip-requirements pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl hy-mode htmlize helm-pydoc helm-gitignore helm-c-yasnippet gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-ycmd flycheck-pos-tip evil-org eshell-prompt-extras esh-help erlang disaster cython-mode company-ycmd company-statistics company-quickhelp company-c-headers company-anaconda cmake-mode clang-format auto-yasnippet ac-ispell auto-complete pos-tip company ycmd flycheck yasnippet request gitignore-mode magit-popup git-commit with-editor alert log4e gntp pythonic deferred f macrostep elisp-slime-nav window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rainbow-delimiters powerline popwin popup pcre2el paradox page-break-lines open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-terminal-cursor-changer evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link names anzu iedit smartparens highlight flx parent-mode spinner pkg-info epl evil-leader quelpa package-build use-package bind-key dash spacemacs-theme))))
+    (yasnippet anzu helm company-anaconda toc-org smeargle shell-pop reveal-in-osx-finder pyvenv pytest pyenv-mode pip-requirements pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl hy-mode htmlize helm-pydoc helm-gitignore helm-c-yasnippet gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-ycmd flycheck-pos-tip evil-org eshell-prompt-extras esh-help erlang disaster diff-hl cython-mode company-ycmd company-statistics company-quickhelp company-c-headers cmake-mode clang-format auto-yasnippet ac-ispell auto-complete anaconda-mode pos-tip company ycmd flycheck request gitignore-mode magit magit-popup git-commit with-editor markdown-mode alert log4e gntp pythonic deferred f window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rainbow-delimiters powerline pcre2el paradox open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-mode-manager helm-make helm-ag google-translate golden-ratio flx-ido fancy-battery expand-region evil-tutor evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link avy names iedit smartparens highlight flx parent-mode spinner popwin popup page-break-lines macrostep ido-vertical-mode helm-projectile helm-descbinds fill-column-indicator exec-path-from-shell evil-visualstar evil-surround evil-escape elisp-slime-nav projectile helm-core async pkg-info epl evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
