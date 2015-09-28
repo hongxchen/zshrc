@@ -131,7 +131,7 @@ eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 # export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # UNP
-# export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
+export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
 
 # dnvm
 source /usr/local/bin/dnvm.sh
@@ -146,6 +146,9 @@ export MONO_GAC_PREFIX="/usr/local"
 # LLVM
 export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
 
+# Urho3D
+export URHO3D_HOME=/Users/hongxchen/Documents/Workspace/Urho3D/Urho3D
+
 # ccache
 export CCACHE_ROOT=usr/local/opt/ccache/libexec
 export PATH=$CCACHE_ROOT:$PATH
@@ -153,7 +156,7 @@ export USE_CCACHE=1
 export NDK_CCACHE=/usr/local/bin/ccache
 
 # Android NDK
-export ANDROID_NDK=/usr/local/opt/android-ndk-r9d
+export ANDROID_NDK=/usr/local/opt/android-ndk
 
 # Android SDK
 export ANDROID_SDK=/usr/local/opt/android-sdk

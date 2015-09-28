@@ -8,8 +8,8 @@ You should not put any user code in this function besides modifying the variable
 values."
   (setq-default
    ;; Base distribution to use. This is a layer contained in the directory
-   ;; `!distribution'. For now available distributions are `spacemacs-core'
-   ;; or `spacemacs'. (default 'spacemacs-core)
+   ;; `+distribution'. For now available distributions are `spacemacs-base'
+   ;; or `spacemacs'. (default 'spacemacs)
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
@@ -32,7 +32,7 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     ;; spell-checking
+     spell-checking
      syntax-checking
      version-control
      osx
@@ -40,8 +40,7 @@ values."
      lua
      erlang
      (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
+            c-c++-default-mode-for-headers 'c++-mode)
      (python :variables
              python-enable-yapf-format-on-save t)
      )
@@ -160,7 +159,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -203,10 +202,6 @@ user code."
   (add-hook 'c-mode-hook 'ycmd-mode)
   (add-hook 'c++-mode-hook 'ycmd-mode)
   (setq ad-redefinition-action 'accept)
-  (global-set-key [C-M-tab] 'clang-format-region)
-  (add-hook 'c++-mode-hook 'clang-format-bindings)
-  (defun clang-format-bindings ()
-    (define-key c++-mode-map [tab] 'clang-format-buffer))
   )
 
 (defun dotspacemacs/user-config ()
@@ -224,7 +219,7 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet anzu helm company-anaconda toc-org smeargle shell-pop reveal-in-osx-finder pyvenv pytest pyenv-mode pip-requirements pbcopy org-repo-todo org-present org-pomodoro org-bullets multi-term mmm-mode markdown-toc magit-gitflow lua-mode launchctl hy-mode htmlize helm-pydoc helm-gitignore helm-c-yasnippet gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger flycheck-ycmd flycheck-pos-tip evil-org eshell-prompt-extras esh-help erlang disaster diff-hl cython-mode company-ycmd company-statistics company-quickhelp company-c-headers cmake-mode clang-format auto-yasnippet ac-ispell auto-complete anaconda-mode pos-tip company ycmd flycheck request gitignore-mode magit magit-popup git-commit with-editor markdown-mode alert log4e gntp pythonic deferred f window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rainbow-delimiters powerline pcre2el paradox open-junk-file neotree move-text linum-relative leuven-theme info+ indent-guide hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-mode-manager helm-make helm-ag google-translate golden-ratio flx-ido fancy-battery expand-region evil-tutor evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-args evil-anzu eval-sexp-fu define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link avy names iedit smartparens highlight flx parent-mode spinner popwin popup page-break-lines macrostep ido-vertical-mode helm-projectile helm-descbinds fill-column-indicator exec-path-from-shell evil-visualstar evil-surround evil-escape elisp-slime-nav projectile helm-core async pkg-info epl evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme))))
+    (helm-c-yasnippet company-ycmd company-statistics company-quickhelp company-c-headers company-anaconda company auto-yasnippet ac-ispell toc-org smeargle shell-pop reveal-in-osx-finder pyvenv pytest pyenv-mode pip-requirements pbcopy org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit lua-mode launchctl hy-mode htmlize helm-pydoc helm-gitignore helm-flyspell gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-commit flycheck-ycmd flycheck-pos-tip flycheck evil-org eshell-prompt-extras esh-help erlang disaster diff-hl cython-mode cmake-mode clang-format anaconda-mode window-numbering which-key volatile-highlights vi-tilde-fringe use-package spray spacemacs-theme smooth-scrolling rainbow-delimiters quelpa powerline popwin popup pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
