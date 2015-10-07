@@ -98,9 +98,9 @@ export GOPATH=/usr/local/opt/go/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # bash-complete
-# if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
-#     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
-# fi
+if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
+    . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
+fi
 
 # coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -136,10 +136,6 @@ export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/
 # dnvm
 source /usr/local/bin/dnvm.sh
 
-# Lua
-export LUA_ROOT=$HOME/Documents/Kits/cloudwu/lua/install
-export PATH=$LUA_ROOT/bin:$PATH
-
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
 
@@ -147,7 +143,7 @@ export MONO_GAC_PREFIX="/usr/local"
 export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
 
 # Urho3D
-export URHO3D_HOME=/Users/hongxchen/Documents/Workspace/Urho3D/Urho3D
+export URHO3D_HOME=$HOME/Documents/Workspace/Urho3D/Urho3D
 
 # ccache
 export CCACHE_ROOT=usr/local/opt/ccache/libexec
