@@ -64,7 +64,6 @@ export LC_ALL=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
-export EDITOR=vim
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -90,6 +89,9 @@ HELPDIR=/usr/local/share/zsh/help
 # export ALTERNATE_EDITOR=""
 # alias emacs='emacsclient -t'
 # alias em='emacs-24.5'
+alias emacs='emacs -nw'
+
+alias vim='nvim'
 
 # golang
 export GOPATH=/usr/local/opt/go/bin
@@ -145,35 +147,11 @@ export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
 # Urho3D
 export URHO3D_HOME=$HOME/Documents/Workspace/Urho3D/Urho3D
 
-# ccache
-export CCACHE_ROOT=usr/local/opt/ccache/libexec
-export PATH=$CCACHE_ROOT:$PATH
-export USE_CCACHE=1
-export NDK_CCACHE=/usr/local/bin/ccache
+# pyenv-virtualenv
+# export PYENV_ROOT=/usr/local/var/pyenv
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
-# Android NDK
-export ANDROID_NDK=/usr/local/opt/android-ndk
-
-# Android SDK
-export ANDROID_SDK=/usr/local/opt/android-sdk
-
-# Android toolchains
-export TOOLCHAINS_ROOT=$ANDROID_NDK/toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin
-export PATH=$TOOLCHAINS_ROOT:$PATH
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=$HOME/Documents/Workspace/yiyou/yybs-client/cocos2d/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/usr/local/opt/android-ndk-r9d
-export PATH=$NDK_ROOT:$PATH
-
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-# Add environment variable ANT_ROOT for cocos2d-x
-export ANT_ROOT=/usr/local/opt/ant/libexec/bin
-export PATH=$ANT_ROOT:$PATH
+# nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh

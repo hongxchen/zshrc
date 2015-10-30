@@ -35,14 +35,10 @@ values."
      spell-checking
      syntax-checking
      version-control
-     osx
      ycmd
+     osx
      lua
      erlang
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode)
-     (python :variables
-             python-enable-yapf-format-on-save t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -161,7 +157,7 @@ values."
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup nil
+   dotspacemacs-maximized-at-startup t
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
@@ -200,9 +196,6 @@ values."
   "Initialization function for user code.
 It is called immediately after `dotspacemacs/init'.  You are free to put any
 user code."
-  (set-variable 'ycmd-server-command `("/usr/local/bin/python" ,(expand-file-name "~/Documents/Kits/ycmd/ycmd")))
-  (add-hook 'c-mode-hook 'ycmd-mode)
-  (add-hook 'c++-mode-hook 'ycmd-mode)
   )
 
 (defun dotspacemacs/user-config ()
@@ -220,7 +213,7 @@ layers configuration. You are free to put any user code."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (avy evil smartparens helm-core dash toc-org smeargle shell-pop reveal-in-osx-finder pyvenv pytest pyenv-mode pip-requirements pbcopy org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit lua-mode launchctl hy-mode htmlize helm-pydoc helm-gitignore helm-flyspell helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-commit gh-md flycheck-ycmd flycheck-pos-tip flycheck evil-org eshell-prompt-extras esh-help erlang disaster diff-hl cython-mode company-ycmd company-statistics company-quickhelp company-c-headers company-anaconda company cmake-mode clang-format auto-yasnippet anaconda-mode ac-ispell window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rainbow-delimiters powerline popwin popup pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag helm google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state which-key use-package spacemacs-theme quelpa evil-leader evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link))))
+    (flx yasnippet avy hydra ycmd alert smartparens projectile helm-core flycheck-ycmd company-ycmd toc-org smeargle shell-pop reveal-in-osx-finder pbcopy org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets multi-term mmm-mode markdown-toc markdown-mode magit-gitflow magit lua-mode launchctl htmlize helm-gitignore helm-flyspell helm-c-yasnippet gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-commit gh-md flycheck-pos-tip flycheck evil-org eshell-prompt-extras esh-help erlang diff-hl company-statistics company-quickhelp company auto-yasnippet ac-ispell window-numbering volatile-highlights vi-tilde-fringe spray smooth-scrolling rainbow-delimiters powerline popwin popup pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep linum-relative leuven-theme info+ indent-guide ido-vertical-mode hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-ag helm google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-jumper evil-indent-textobject evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move auto-highlight-symbol auto-dictionary aggressive-indent adaptive-wrap ace-window ace-link evil-leader evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
