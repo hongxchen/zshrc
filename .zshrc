@@ -10,6 +10,10 @@ ZSH_THEME="ys"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
@@ -45,11 +49,11 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx brew)
+plugins=(git brew osx)
 
 # User configuration
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$PATH
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -65,8 +69,10 @@ export LC_ALL=en_US.UTF-8
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR='emacs'
+
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -80,24 +86,10 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# HELP
-unalias run-help
-autoload run-help
-HELPDIR=/usr/local/share/zsh/help
-
-# emacs daemon
-# export ALTERNATE_EDITOR=""
-# alias emacs='emacsclient -t'
-# alias em='emacs-24.5'
-alias emacs='emacs -nw'
-
-alias vim='nvim'
+alias emacs="emacs -nw"
 
 # golang
 export GOPATH=/usr/local/opt/go/bin
-
-# rvm
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # bash-complete
 if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
@@ -129,14 +121,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 
-# WebRTC
-# export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
-
 # UNP
 export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
-
-# dnvm
-source /usr/local/bin/dnvm.sh
 
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
@@ -146,12 +132,3 @@ export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
 
 # Urho3D
 export URHO3D_HOME=$HOME/Documents/Workspace/Urho3D/Urho3D
-
-# pyenv-virtualenv
-# export PYENV_ROOT=/usr/local/var/pyenv
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
-# nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
