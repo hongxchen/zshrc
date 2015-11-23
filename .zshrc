@@ -69,8 +69,6 @@ export LC_ALL=en_US.UTF-8
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='emacs'
-
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
@@ -86,7 +84,8 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias emacs="emacs -nw"
+alias vim="nvim"
+export EDITOR='vim'
 
 # golang
 export GOPATH=/usr/local/opt/go/bin
@@ -107,6 +106,9 @@ export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
+# ccache
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
+
 # alias
 alias ls='gls --color=auto'
 alias dir='gdir --color=auto'
@@ -121,14 +123,24 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 
-# UNP
-export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
-
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
+
+# PHP
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+
+# JAVA_HOME
+export JAVA_HOME="/Library/Java/Home"
+
+# depot_tools
+export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # LLVM
 export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
 
+# UNP
+export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
+
 # Urho3D
 export URHO3D_HOME=$HOME/Documents/Workspace/Urho3D/Urho3D
+
