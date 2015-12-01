@@ -40,8 +40,11 @@ values."
      version-control
      osx
      ycmd
+     gtags
      lua
      erlang
+     (python :variables
+             python-enable-yapf-format-on-save t)
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
      )
