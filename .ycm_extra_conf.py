@@ -84,15 +84,15 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1',
 '-isystem',
-'/usr/local/include',
-'-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/7.0.0/include',
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 '-isystem',
+'/usr/local/include/lua5.3',
+'-isystem',
+'/usr/local/include',
+'-isystem',
 '/usr/include',
-'-I',
-'/usr/local/opt/opencv3/include',
 ]
 
 
