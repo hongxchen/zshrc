@@ -88,7 +88,10 @@ alias vim="nvim"
 export EDITOR='vim'
 
 # golang
-export GOPATH=/usr/local/opt/go/bin
+export GOPATH="$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code"
+
+# bee
+export PATH="$HOME/Documents/Workspace/go/libs/bin:$PATH"
 
 # bash-complete
 if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then

@@ -42,7 +42,9 @@ values."
      ycmd
      gtags
      lua
+     go
      erlang
+     php
      (python :variables
              python-enable-yapf-format-on-save t)
      (c-c++ :variables
