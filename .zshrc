@@ -98,10 +98,6 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
 
-# coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
 # gnu-tar
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
@@ -119,6 +115,7 @@ alias grep='ggrep --color=auto'
 alias cat='ccat'
 alias locate='locate -i -d /var/db/locate.database'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
+alias svn=colorsvn
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -147,3 +144,5 @@ export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/
 # Urho3D
 export URHO3D_HOME=$HOME/Documents/Workspace/Urho3D/Urho3D
 
+# Symfony
+export PATH=$HOME/Documents/Kits/php:$PATH
