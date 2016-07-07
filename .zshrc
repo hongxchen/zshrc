@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx)
+plugins=(git brew osx react-native)
 
 # User configuration
 
@@ -160,4 +160,7 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Symfony
 # export PATH=$HOME/Documents/Kits/php:$PATH
+
+# imgcat
+export PATH=$HOME/Documents/Kits/zshrc:$PATH
 
