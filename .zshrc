@@ -84,8 +84,51 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# alias
 alias vim="nvim"
-export EDITOR='vim'
+alias ls='gls --color=auto'
+alias dir='gdir --color=auto'
+alias grep='ggrep --color=auto'
+alias cat='ccat'
+alias locate='locate -i -d /var/db/locate.database'
+alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
+alias svn=colorsvn
+alias tree='tree -ah --du'
+alias emacs='emacs -nw'
+alias phalcon='phalcon.php'
+
+# dircolors-solarized
+eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
+
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# zsh-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# bash-complete
+if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
+    . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
+fi
+
+# imgcat
+export PATH=$HOME/Documents/Kits/zshrc:$PATH
+
+# gnu-tar
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+# gnu-sed
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+
+# ccache
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
+
+# JAVA_HOME
+export JAVA_HOME="/Library/Java/Home"
+
+# Mono
+export MONO_GAC_PREFIX="/usr/local"
 
 # android
 export ANDROID_HOME="/usr/local/opt/android-sdk"
@@ -99,58 +142,8 @@ export GOPATH="$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/co
 # bee
 export PATH="$HOME/Documents/Workspace/go/libs/bin:$PATH"
 
-# bash-complete
-if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
-    . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
-fi
-
-# gnu-tar
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-
-# gnu-sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
-
-# ccache
-export PATH="/usr/local/opt/ccache/libexec:$PATH"
-
-# alias
-alias ls='gls --color=auto'
-alias dir='gdir --color=auto'
-alias grep='ggrep --color=auto'
-alias cat='ccat'
-alias locate='locate -i -d /var/db/locate.database'
-alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
-alias svn=colorsvn
-alias tree='tree -ah --du'
-alias emacs='emacs -nw'
-
-# zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
-
-# zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# dircolors-solarized
-eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
-
-# Mono
-export MONO_GAC_PREFIX="/usr/local"
-
-# JAVA_HOME
-export JAVA_HOME="/Library/Java/Home"
-
 # depot_tools
-export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
-
-# LLVM
-# export LLVM_DIR=/usr/local/opt/llvm/share/llvm/cmake
-
-# UNP
-# export PATH=$HOME/Documents/Workspace/unp/unpv13e:$HOME/Documents/Workspace/unp/unpv13e/lib:$PATH
-
-# Urho3D
-# export URHO3D_HOME=$HOME/Documents/Workspace/Urho3D/Urho3D
+#export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
 export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
@@ -158,9 +151,5 @@ export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
 # Composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
-# Symfony
-# export PATH=$HOME/Documents/Kits/php:$PATH
-
-# imgcat
-export PATH=$HOME/Documents/Kits/zshrc:$PATH
-
+# phalcon-devtools
+export PATH=$HOME/Documents/Kits/phalcon/phalcon-devtools:$PATH
