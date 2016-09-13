@@ -96,6 +96,7 @@ alias svn=colorsvn
 alias tree='tree -ah --du'
 alias emacs='emacs -nw'
 alias phalcon='phalcon.php'
+alias mysql='mycli'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
