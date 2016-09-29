@@ -144,7 +144,7 @@ export GOPATH="$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/co
 export PATH="$HOME/Documents/Workspace/go/libs/bin:$PATH"
 
 # depot_tools
-#export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
+export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
 export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
@@ -154,3 +154,4 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # phalcon-devtools
 export PATH=$HOME/Documents/Kits/phalcon/phalcon-devtools:$PATH
+
