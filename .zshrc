@@ -95,7 +95,6 @@ alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
 alias emacs='emacs -nw'
-alias phalcon='phalcon.php'
 alias mysql='mycli'
 
 # dircolors-solarized
@@ -147,11 +146,8 @@ export PATH="$HOME/Documents/Workspace/go/libs/bin:$PATH"
 export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
 
 # Composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
-
-# phalcon-devtools
-export PATH=$HOME/Documents/Kits/phalcon/phalcon-devtools:$PATH
 
