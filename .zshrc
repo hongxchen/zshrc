@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx react-native)
+plugins=(git brew osx)
 
 # User configuration
 
@@ -87,7 +87,6 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias
 alias vim="nvim"
 alias ls='gls --color=auto'
-alias dir='gdir --color=auto'
 alias grep='ggrep --color=auto'
 alias cat='ccat'
 alias locate='locate -i -d /var/db/locate.database'
@@ -95,7 +94,7 @@ alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
 alias emacs='emacs -nw'
-alias mysql='mycli'
+alias phalcon='~/Documents/Kits/php/phalcon-devtools/phalcon.php'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
@@ -146,8 +145,11 @@ export PATH="$HOME/Documents/Workspace/go/libs/bin:$PATH"
 export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 # Composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
+
+# Urho3D
+export URHO3D_HOME="$HOME/Documents/Kits/Urho3D"
 
