@@ -94,7 +94,7 @@ alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
 alias emacs='emacs -nw'
-alias phalcon='~/Documents/Kits/php/phalcon-devtools/phalcon.php'
+alias phalcon='$PTOOLSPATH/phalcon.php'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
@@ -114,14 +114,14 @@ fi
 export PATH=$HOME/Documents/Kits/zshrc:$PATH
 
 # gnu-tar
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
 
 # gnu-sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
 
 # ccache
-export PATH="/usr/local/opt/ccache/libexec:$PATH"
+export PATH=/usr/local/opt/ccache/libexec:$PATH
 
 # JAVA_HOME
 export JAVA_HOME="/Library/Java/Home"
@@ -130,26 +130,31 @@ export JAVA_HOME="/Library/Java/Home"
 export MONO_GAC_PREFIX="/usr/local"
 
 # android
-export ANDROID_HOME="/usr/local/opt/android-sdk"
-export ANDROID_SDK="/usr/local/opt/android-sdk"
-export ANDROID_NDK="/usr/local/opt/android-ndk"
-export PATH="$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH"
+#export ANDROID_HOME=/usr/local/opt/android-sdk
+#export ANDROID_SDK=/usr/local/opt/android-sdk
+#export ANDROID_NDK=/usr/local/opt/android-ndk
+#export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
 
-# golang
-export GOPATH="$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code"
-
-# bee
-export PATH="$HOME/Documents/Workspace/go/libs/bin:$PATH"
+# Golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code
+export GOBIN=$HOME/Documents/Workspace/go/code/bin
+export PATH=$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH
 
 # depot_tools
-export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
+# export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
-export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
+export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+
+# Phalcon
+PTOOLSPATH=$HOME/Documents/Kits/php/phalcon-devtools
 
 # Composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Urho3D
-export URHO3D_HOME="$HOME/Documents/Kits/Urho3D"
+# export URHO3D_HOME="$HOME/Documents/Kits/Urho3D"
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
