@@ -49,7 +49,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx)
+plugins=(git brew osx react-native)
 
 # User configuration
 
@@ -85,16 +85,14 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # alias
-alias vim="nvim"
 alias ls='gls --color=auto'
 alias grep='ggrep --color=auto'
 alias cat='ccat'
-alias locate='locate -i -d /var/db/locate.database'
+#alias locate='locate -i -d /var/db/locate.database'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
-alias emacs='emacs -nw'
-alias phalcon='$PTOOLSPATH/phalcon.php'
+alias emacs='open /Applications/Emacs.app'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
@@ -110,6 +108,10 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
 
+# make
+export PATH=/usr/local/opt/make/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/make/libexec/gnuman:$MANPATH
+
 # imgcat
 export PATH=$HOME/Documents/Kits/zshrc:$PATH
 
@@ -119,6 +121,10 @@ export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
 # gnu-sed
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
+
+# findutils
+export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
+export MANPATH=/usr/local/opt/findutils/libexec/gnuman:$MANPATH
 
 # ccache
 export PATH=/usr/local/opt/ccache/libexec:$PATH
@@ -130,10 +136,10 @@ export JAVA_HOME="/Library/Java/Home"
 export MONO_GAC_PREFIX="/usr/local"
 
 # android
-#export ANDROID_HOME=/usr/local/opt/android-sdk
-#export ANDROID_SDK=/usr/local/opt/android-sdk
-#export ANDROID_NDK=/usr/local/opt/android-ndk
-#export PATH=$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$PATH
+export ANDROID_HOME=/usr/local/Caskroom/android-sdk/25.2.3
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
+export PATH=$ANDROID_HOME/ndk-bundle:$PATH
 
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
@@ -142,19 +148,25 @@ export GOBIN=$HOME/Documents/Workspace/go/code/bin
 export PATH=$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH
 
 # depot_tools
-# export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
+#export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
-
-# Phalcon
-PTOOLSPATH=$HOME/Documents/Kits/php/phalcon-devtools
+export PATH=$(brew --prefix homebrew/php/php71)/bin:$PATH
 
 # Composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Urho3D
-# export URHO3D_HOME="$HOME/Documents/Kits/Urho3D"
+#export URHO3D_HOME=$HOME/Documents/Kits/Urho3D
+#export ANDROID_NDK=/usr/local/opt/android-ndk/android-ndk-r14b
+#export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# mycli
+export LESS="-RXF"
+
+# Qt
+export PATH=/usr/local/opt/qt/bin:$PATH
+
