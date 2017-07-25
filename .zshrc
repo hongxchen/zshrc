@@ -92,7 +92,7 @@ alias cat='ccat'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
-alias emacs='open /Applications/Emacs.app'
+#alias emacs='open /Applications/Emacs.app'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
@@ -107,6 +107,9 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # make
 export PATH=/usr/local/opt/make/libexec/gnubin:$PATH
@@ -129,14 +132,14 @@ export MANPATH=/usr/local/opt/findutils/libexec/gnuman:$MANPATH
 # ccache
 export PATH=/usr/local/opt/ccache/libexec:$PATH
 
-# JAVA_HOME
+# Java
 export JAVA_HOME="/Library/Java/Home"
 
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
 
-# android
-export ANDROID_HOME=/usr/local/Caskroom/android-sdk/25.2.3
+# Android
+export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
 export PATH=$ANDROID_HOME/ndk-bundle:$PATH
@@ -160,9 +163,6 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 #export URHO3D_HOME=$HOME/Documents/Kits/Urho3D
 #export ANDROID_NDK=/usr/local/opt/android-ndk/android-ndk-r14b
 #export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # mycli
 export LESS="-RXF"
