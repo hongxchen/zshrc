@@ -92,7 +92,6 @@ alias cat='ccat'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
-#alias emacs='open /Applications/Emacs.app'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
@@ -108,9 +107,6 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # make
 export PATH=/usr/local/opt/make/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/make/libexec/gnuman:$MANPATH
@@ -124,10 +120,6 @@ export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
 # gnu-sed
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
-
-# findutils
-export PATH=/usr/local/opt/findutils/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/findutils/libexec/gnuman:$MANPATH
 
 # ccache
 export PATH=/usr/local/opt/ccache/libexec:$PATH
@@ -149,9 +141,6 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code
 export GOBIN=$HOME/Documents/Workspace/go/code/bin
 export PATH=$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH
-
-# depot_tools
-#export PATH=$HOME/Documents/Kits/webrtc/depot_tools:$PATH
 
 # PHP
 export PATH=$(brew --prefix homebrew/php/php71)/bin:$PATH
