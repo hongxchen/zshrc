@@ -127,11 +127,9 @@ export PATH=/usr/local/opt/ccache/libexec:$PATH
 # Java
 export JAVA_HOME="/Library/Java/Home"
 
-# Mono
-export MONO_GAC_PREFIX="/usr/local"
-
 # Android
-export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397
+export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397,26.0.2
+export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
 export PATH=$ANDROID_HOME/ndk-bundle:$PATH
