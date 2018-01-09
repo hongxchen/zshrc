@@ -136,6 +136,7 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
 export PATH=$ANDROID_HOME/ndk-bundle:$PATH
+#export PATH=/Users/hongxchen/Documents/Kits/cocos2d-x/android-ndk-r10e:$PATH
 
 # Golang
 export GOROOT=/usr/local/opt/go/libexec
@@ -159,4 +160,7 @@ export LESS="-RXF"
 
 # Qt
 export PATH=/usr/local/opt/qt/bin:$PATH
+
+# add by quick-cocos2d-x setup, DATE: 2018-01-08 TIME: 11:48:05
+export QUICK_V3_ROOT=`cat ~/.QUICK_V3_ROOT`
 
