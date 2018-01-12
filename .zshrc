@@ -128,7 +128,7 @@ export PATH=/usr/local/opt/ccache/libexec:$PATH
 export JAVA_HOME="/Library/Java/Home"
 
 # tomcat-native
-# export CATALINA_OPTS="$CATALINA_OPTS -Djava.library.path=/usr/local/opt/tomcat-native/lib"
+export CATALINA_OPTS="$CATALINA_OPTS -Djava.library.path=/usr/local/opt/tomcat-native/lib"
 
 # Android
 export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397
@@ -151,9 +151,9 @@ export PATH=$(brew --prefix homebrew/php/php72)/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Urho3D
-#export URHO3D_HOME=$HOME/Documents/Kits/Urho3D
-#export ANDROID_NDK=/usr/local/opt/android-ndk/android-ndk-r14b
-#export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
+export URHO3D_HOME=$HOME/Documents/Kits/Urho3D
+export ANDROID_NDK=/usr/local/Caskroom/android-sdk/3859397/ndk-bundle
+export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
 
 # mycli
 export LESS="-RXF"
@@ -161,6 +161,6 @@ export LESS="-RXF"
 # Qt
 export PATH=/usr/local/opt/qt/bin:$PATH
 
-# add by quick-cocos2d-x setup, DATE: 2018-01-08 TIME: 11:48:05
-export QUICK_V3_ROOT=`cat ~/.QUICK_V3_ROOT`
+# Mono
+export MONO_GAC_PREFIX="/usr/local"
 
