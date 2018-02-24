@@ -151,9 +151,9 @@ export PATH=$(brew --prefix homebrew/php/php72)/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
 # Urho3D
-export URHO3D_HOME=$HOME/Documents/Kits/Urho3D
-export ANDROID_NDK=/usr/local/Caskroom/android-sdk/3859397/ndk-bundle
-export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
+export URHO3D_HOME=$HOME/Documents/Workspace/urho3d/SDK
+#export ANDROID_NDK=/usr/local/Caskroom/android-sdk/3859397/ndk-bundle
+#export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
 
 # mycli
 export LESS="-RXF"
@@ -164,3 +164,6 @@ export PATH=/usr/local/opt/qt/bin:$PATH
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
 
+# OGRE
+export OGRE_HOME=$HOME/Documents/Kits/ogre/ogre-build/sdk
+export OGRE_MEDIA_DIR=$OGRE_HOME/lib/OGRE/Samples
