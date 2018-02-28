@@ -127,9 +127,6 @@ export PATH=/usr/local/opt/ccache/libexec:$PATH
 # Java
 export JAVA_HOME="/Library/Java/Home"
 
-# tomcat-native
-export CATALINA_OPTS="$CATALINA_OPTS -Djava.library.path=/usr/local/opt/tomcat-native/lib"
-
 # Android
 export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -143,9 +140,6 @@ export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code
 export GOBIN=$HOME/Documents/Workspace/go/code/bin
 export PATH=$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH
-
-# PHP
-export PATH=$(brew --prefix homebrew/php/php72)/bin:$PATH
 
 # Composer
 export PATH=$HOME/.composer/vendor/bin:$PATH
