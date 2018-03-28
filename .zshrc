@@ -63,11 +63,11 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -108,56 +108,59 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
 fi
 
 # make
-export PATH=/usr/local/opt/make/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/make/libexec/gnuman:$MANPATH
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
 
 # imgcat
-export PATH=$HOME/Documents/Kits/zshrc:$PATH
+export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 
 # gnu-tar
-export PATH=/usr/local/opt/gnu-tar/libexec/gnubin:$PATH
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # gnu-sed
-export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
+export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
 
 # ccache
-export PATH=/usr/local/opt/ccache/libexec:$PATH
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
 # Java
 export JAVA_HOME="/Library/Java/Home"
 
 # Android
-export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export ANDROID_NDK_HOME=$ANDROID_HOME/ndk-bundle
-export PATH=$ANDROID_HOME/ndk-bundle:$PATH
-#export PATH=/Users/hongxchen/Documents/Kits/cocos2d-x/android-ndk-r10e:$PATH
+export ANDROID_HOME="/usr/local/Caskroom/android-sdk/3859397"
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export ANDROID_NDK_HOME="$ANDROID_HOME/ndk-bundle"
+export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
+#export PATH="/Users/hongxchen/Documents/Kits/cocos2d-x/android-ndk-r10e:$PATH"
 
 # Golang
-export GOROOT=/usr/local/opt/go/libexec
-export GOPATH=$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code
-export GOBIN=$HOME/Documents/Workspace/go/code/bin
-export PATH=$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH
+export GOROOT="/usr/local/opt/go/libexec"
+export GOPATH="$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code"
+export GOBIN="$HOME/Documents/Workspace/go/code/bin"
+export PATH="$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH"
 
 # Composer
-export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Urho3D
-export URHO3D_HOME=$HOME/Documents/Workspace/urho3d/SDK
-#export ANDROID_NDK=/usr/local/Caskroom/android-sdk/3859397/ndk-bundle
-#export PATH=$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH
+export URHO3D_HOME="$HOME/Documents/Workspace/urho3d/SDK"
+#export ANDROID_NDK="/usr/local/Caskroom/android-sdk/3859397/ndk-bundle"
+#export PATH="$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH"
 
 # mycli
 export LESS="-RXF"
 
 # Qt
-export PATH=/usr/local/opt/qt/bin:$PATH
+export PATH="/usr/local/opt/qt/bin:$PATH"
 
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
 
 # OGRE
-export OGRE_HOME=$HOME/Documents/Kits/ogre/ogre-build/sdk
-export OGRE_MEDIA_DIR=$OGRE_HOME/lib/OGRE/Samples
+export OGRE_HOME="$HOME/Documents/Kits/ogre/ogre-build/sdk"
+export OGRE_MEDIA_DIR="$OGRE_HOME/lib/OGRE/Samples"
+
+# OpenSSL
+export PATH="/usr/local/opt/openssl/bin:$PATH"
