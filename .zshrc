@@ -158,9 +158,9 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 # Mono
 export MONO_GAC_PREFIX="/usr/local"
 
-# OGRE
-export OGRE_HOME="$HOME/Documents/Kits/ogre/ogre-build/sdk"
-export OGRE_MEDIA_DIR="$OGRE_HOME/lib/OGRE/Samples"
-
 # OpenSSL
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# OpenOffice
+export PATH="/Applications/OpenOffice.app/Contents/MacOS:$PATH"
+
