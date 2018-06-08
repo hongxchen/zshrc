@@ -126,6 +126,8 @@ export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
 # Java
 export JAVA_HOME="/Library/Java/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
+export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
 # Android
 export ANDROID_HOME="/usr/local/Caskroom/android-sdk/3859397"
