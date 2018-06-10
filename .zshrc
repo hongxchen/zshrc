@@ -166,3 +166,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 # OpenOffice
 export PATH="/Applications/OpenOffice.app/Contents/MacOS:$PATH"
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
