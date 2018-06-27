@@ -169,3 +169,13 @@ export PATH="/Applications/OpenOffice.app/Contents/MacOS:$PATH"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# mysql
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# php
+export PATH="/usr/local/opt/php@5.6/bin:$PATH"
+export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
+
+# flutter
+export PATH="$HOME/Documents/Kits/Flutter/flutter/bin:$PATH"
+
