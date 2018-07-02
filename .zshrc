@@ -107,15 +107,17 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
 
+# coreutils
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
 # make
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
 
-# imgcat
-export PATH="$HOME/Documents/Kits/zshrc:$PATH"
-
 # gnu-tar
 export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
 # gnu-sed
 export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -181,3 +183,5 @@ export PATH="$HOME/Documents/Kits/Flutter/flutter/bin:$PATH"
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
+# imgcat
+export PATH="$HOME/Documents/Kits/zshrc:$PATH"
