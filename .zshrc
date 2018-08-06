@@ -108,8 +108,8 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
 fi
 
 # coreutils
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+#export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # make
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
@@ -185,3 +185,13 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 # imgcat
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
+
+# vulkan-sdk
+export VULKAN_SDK=/usr/local/Caskroom/vulkan-sdk/1.1.77.0/macOS
+export VK_ICD_FILENAMES=/usr/local/Caskroom/vulkan-sdk/1.1.77.0/macOS/etc/vulkan/icd.d/MoltenVK_icd.json
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/Caskroom/vulkan-sdk/1.1.77.0/macOS/lib
+export VK_LAYER_PATH=/usr/local/Caskroom/vulkan-sdk/1.1.77.0/macOS/etc/vulkan/explicit_layer.d
+export PATH=/usr/local/Caskroom/vulkan-sdk/1.1.77.0/macOS/bin:"$PATH"
+
+# proxy
+export ALL_PROXY=socks5://127.0.0.1:8104
