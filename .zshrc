@@ -140,10 +140,9 @@ export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
 #export PATH="/Users/hongxchen/Documents/Kits/cocos2d-x/android-ndk-r10e:$PATH"
 
 # Golang
-export GOROOT="/usr/local/opt/go/libexec"
-export GOPATH="$HOME/Documents/Workspace/go/libs:$HOME/Documents/Workspace/go/code"
-export GOBIN="$HOME/Documents/Workspace/go/code/bin"
-export PATH="$HOME/Documents/Workspace/go/libs/bin:$HOME/Documents/Workspace/go/code/bin:$PATH"
+export GOPATH="$HOME/Documents/Workspace/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOPATH/bin:$PATH"
 
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
