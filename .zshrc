@@ -140,6 +140,7 @@ export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
 #export PATH="/Users/hongxchen/Documents/Kits/cocos2d-x/android-ndk-r10e:$PATH"
 
 # Golang
+export GOROOT="/usr/local/opt/go/libexec"
 export GOPATH="$HOME/Documents/Workspace/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOPATH/bin:$PATH"
@@ -180,7 +181,7 @@ export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
 # flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-export PATH="$HOME/Documents/Workspace/flutter/flutter/bin:$PATH"
+export PATH="$HOME/Documents/Kits/flutter/bin:$PATH"
 
 # imgcat
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
