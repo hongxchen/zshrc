@@ -92,6 +92,8 @@ alias cat='ccat'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
+alias ip='curl ip.cn'
+alias unproxy='unset ALL_PROXY'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
