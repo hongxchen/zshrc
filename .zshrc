@@ -93,7 +93,7 @@ alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
 alias ip='curl ip.cn'
-alias unproxy='unset ALL_PROXY'
+#alias unproxy='unset ALL_PROXY'
 
 # dircolors-solarized
 eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
@@ -189,11 +189,13 @@ export PATH="$HOME/Documents/Kits/flutter/bin:$PATH"
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 
 # vulkan-sdk
-export VULKAN_SDK=/usr/local/Caskroom/vulkan-sdk/1.1.82.0/macOS
-export VK_ICD_FILENAMES=/usr/local/Caskroom/vulkan-sdk/1.1.82.0/macOS/etc/vulkan/icd.d/MoltenVK_icd.json
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/usr/local/Caskroom/vulkan-sdk/1.1.82.0/macOS/lib
-export VK_LAYER_PATH=/usr/local/Caskroom/vulkan-sdk/1.1.82.0/macOS/etc/vulkan/explicit_layer.d
-export PATH=/usr/local/Caskroom/vulkan-sdk/1.1.82.0/macOS/bin:"$PATH"
+export VULKAN_SDK=/usr/local/Caskroom/vulkan-sdk/1.1.82.1/macOS
+export VK_ICD_FILENAMES=$VULKAN_SDK/etc/vulkan/icd.d/MoltenVK_icd.json
+export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$VULKAN_SDK/lib
+export VK_LAYER_PATH=$VULKAN_SDK/etc/vulkan/explicit_layer.d
+export PATH=$VULKAN_SDK/bin:"$PATH"
 
 # proxy
-export ALL_PROXY=socks5://127.0.0.1:8104
+#export ALL_PROXY=socks5://localhost:8104
+export http_proxy=http://localhost:8105
+export https_proxy=http://localhost:8105
