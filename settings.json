@@ -19,6 +19,7 @@
     "html.suggest.angular1": false,
     "html.suggest.ionic": false,
     "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
     // VScode 文件搜索区域配置
     "search.exclude": {
         "**/dist": true,
@@ -117,5 +118,10 @@
     "less.compile": {
         "compress": true,
         "sourceMap": true,
-    }
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path": "/Users/hongxchen/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.draft-path": "/Users/hongxchen/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+    },
+    "vsicons.projectDetection.autoReload": true,
 }

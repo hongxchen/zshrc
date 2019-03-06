@@ -1,17 +1,26 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="ys"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
@@ -39,24 +48,28 @@ DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx react-native)
+plugins=(git brew osx)
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
@@ -88,15 +101,10 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 alias ls='gls --color=auto'
 alias grep='ggrep --color=auto'
 alias cat='ccat'
-#alias locate='locate -i -d /var/db/locate.database'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
 alias ip='curl ip.cn'
-#alias unproxy='unset ALL_PROXY'
-
-# dircolors-solarized
-eval $(gdircolors ~/.dircolors-solarized/dircolors.ansi-dark)
 
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -109,27 +117,11 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
 
-# coreutils
-#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-#export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-# make
-#export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-#export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
-
-# gnu-tar
-#export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-#export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
-
-# gnu-sed
-#export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-#export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
-
 # ccache
 export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
 # Java
-export JAVA_HOME="/Library/Java/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
@@ -139,7 +131,6 @@ export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ANDROID_NDK_HOME="$ANDROID_HOME/ndk-bundle"
 export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
-#export PATH="/Users/hongxchen/Documents/Kits/cocos2d-x/android-ndk-r10e:$PATH"
 
 # Golang
 export GOROOT="/usr/local/opt/go/libexec"
@@ -167,18 +158,8 @@ export MONO_GAC_PREFIX="/usr/local"
 # OpenSSL
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-# OpenOffice
-export PATH="/Applications/OpenOffice.app/Contents/MacOS:$PATH"
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # mysql
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-
-# php
-export PATH="/usr/local/opt/php@5.6/bin:$PATH"
-export PATH="/usr/local/opt/php@5.6/sbin:$PATH"
 
 # flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
@@ -188,14 +169,6 @@ export PATH="$HOME/Documents/Kits/flutter/bin:$PATH"
 # imgcat
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 
-# vulkan-sdk
-export VULKAN_SDK=/usr/local/Caskroom/vulkan-sdk/1.1.82.1/macOS
-export VK_ICD_FILENAMES=$VULKAN_SDK/etc/vulkan/icd.d/MoltenVK_icd.json
-export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$VULKAN_SDK/lib
-export VK_LAYER_PATH=$VULKAN_SDK/etc/vulkan/explicit_layer.d
-export PATH=$VULKAN_SDK/bin:"$PATH"
-
 # proxy
-#export ALL_PROXY=socks5://localhost:8104
 export http_proxy=http://localhost:8105
 export https_proxy=http://localhost:8105
