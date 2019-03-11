@@ -1,11 +1,10 @@
 {
     // VScode主题配置
-    "editor.tabSize": 2,
     "editor.lineHeight": 24,
     "editor.renderLineHighlight": "none",
     "editor.renderWhitespace": "none",
-    "editor.fontFamily": "Consolas",
-    "editor.fontSize": 15,
+    "editor.fontFamily": "SourceCodePro-Regular",
+    "editor.fontSize": 14,
     "editor.cursorBlinking": "smooth",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
@@ -48,7 +47,11 @@
         "**/.mvn": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/.DS_Store": true
+        "**/.DS_Store": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     // 配置文件关联，以便启用对应的智能提示，比如wxss使用css
     "files.associations": {
