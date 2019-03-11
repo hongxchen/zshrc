@@ -32,13 +32,23 @@
         "**/.idea": true,
         "**/.vscode": false,
         "**/yarn.lock": true,
-        "**/tmp": true
+        "**/tmp": true,
+        "**/node": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/target": true
     },
     // 排除文件搜索区域，比如node_modules(贴心的默认设置已经屏蔽了)
     "files.exclude": {
         "**/.idea": true,
         "**/yarn.lock": true,
-        "**/tmp": true
+        "**/tmp": true,
+        "**/.git": true,
+        "**/.gradle": true,
+        "**/.mvn": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true
     },
     // 配置文件关联，以便启用对应的智能提示，比如wxss使用css
     "files.associations": {
@@ -124,4 +134,6 @@
         "vs-kubernetes.draft-path": "/Users/hongxchen/.vs-kubernetes/tools/draft/darwin-amd64/draft"
     },
     "vsicons.projectDetection.autoReload": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

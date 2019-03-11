@@ -62,7 +62,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git brew osx)
+plugins=(git brew osx docker docker-compose jhipster)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,7 +99,7 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # alias
 alias ls='gls --color=auto'
-alias grep='ggrep --color=auto'
+#alias grep='ggrep --color=auto'
 alias cat='ccat'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
