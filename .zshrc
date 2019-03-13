@@ -106,6 +106,9 @@ alias svn=colorsvn
 alias tree='tree -ah --du'
 alias ip='curl ip.cn'
 
+#dircolors-solarized
+eval `gdircolors /Users/hongxchen/Documents/Kits/dircolors-solarized/dircolors.ansi-dark`
+
 # zsh-completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 
