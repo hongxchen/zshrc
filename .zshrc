@@ -120,6 +120,13 @@ if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; th
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion
 fi
 
+# NativeScript
+###-tns-completion-start-###
+if [ -f /Users/hongxchen/.tnsrc ]; then
+    source /Users/hongxchen/.tnsrc
+fi
+###-tns-completion-end-###
+
 # ccache
 export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
@@ -173,5 +180,6 @@ export PATH="$HOME/Documents/Kits/flutter/bin:$PATH"
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 
 # proxy
-export http_proxy=http://localhost:8105
-export https_proxy=http://localhost:8105
+export HTTP_PROXY=http://localhost:8105
+export HTTPS_PROXY=http://localhost:8105
+export NO_PROXY=localhost,127.0.0.1
