@@ -12,7 +12,6 @@
     "explorer.openEditors.visible": 0,
     // 是否允许自定义的snippet片段提示,比如自定义的vue片段开启后就可以智能提示
     "editor.snippetSuggestions": "top",
-    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "One Monokai",
     "workbench.startupEditor": "newUntitledFile",
     "html.suggest.angular1": false,
@@ -135,9 +134,15 @@
         "vs-kubernetes.helm-path": "/Users/hongxchen/.vs-kubernetes/tools/helm/darwin-amd64/helm",
         "vs-kubernetes.draft-path": "/Users/hongxchen/.vs-kubernetes/tools/draft/darwin-amd64/draft"
     },
-    "vsicons.projectDetection.autoReload": true,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "editor.largeFileOptimizations": false
+    "editor.largeFileOptimizations": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vsicons.projectDetection.autoReload": true,
 }

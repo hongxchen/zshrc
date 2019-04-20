@@ -134,7 +134,7 @@ fi
 export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
 # Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
@@ -186,3 +186,7 @@ export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 export HTTP_PROXY=http://localhost:8105
 export HTTPS_PROXY=http://localhost:8105
 export NO_PROXY=localhost,127.0.0.1
+
+# depot_tools
+export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
+
