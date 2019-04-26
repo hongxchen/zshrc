@@ -134,7 +134,7 @@ fi
 export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
 # Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
@@ -147,9 +147,9 @@ export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
 
 # Golang
 export GOROOT="/usr/local/opt/go/libexec"
-export GOPATH="$HOME/Documents/Workspace/go"
-export GOBIN="$GOPATH/bin"
-export PATH="$GOPATH/bin:$PATH"
+export GOBIN="$HOME/Documents/Workspace/go/bin"
+export GOPATH="$HOME/Documents/Workspace/go:$HOME/Documents/Workspace/go/src/gowork"
+export PATH="$HOME/Documents/Workspace/go/bin:$HOME/Documents/Workspace/go/src/gowork/bin:$PATH"
 
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
