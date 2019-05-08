@@ -143,5 +143,6 @@
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "vsicons.projectDetection.autoReload": true
 }

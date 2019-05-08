@@ -149,8 +149,9 @@ export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
 # Golang
 export GOROOT="/usr/local/opt/go/libexec"
 export GOBIN="$HOME/Documents/Workspace/go/bin"
-export GOPATH="$HOME/Documents/Workspace/go:$HOME/Documents/Workspace/go/src/gowork"
-export PATH="$HOME/Documents/Workspace/go/bin:$HOME/Documents/Workspace/go/src/gowork/bin:$PATH"
+export GOPATH="$HOME/Documents/Workspace/go"
+export PATH="$HOME/Documents/Workspace/go/bin:$PATH"
+export GO15VENDOREXPERIMENT=1
 
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
