@@ -142,6 +142,7 @@ export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 # Android
 export ANDROID_HOME="/usr/local/Caskroom/android-sdk/4333796"
 export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ANDROID_NDK_HOME="$ANDROID_HOME/ndk-bundle"
 export PATH="$ANDROID_HOME/ndk-bundle:$PATH"
