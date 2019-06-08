@@ -152,7 +152,7 @@ export GOROOT="/usr/local/opt/go/libexec"
 export GOBIN="$HOME/Documents/Workspace/go/bin"
 export GOPATH="$HOME/Documents/Workspace/go"
 export PATH="$HOME/Documents/Workspace/go/bin:$PATH"
-export GO15VENDOREXPERIMENT=1
+export GO111MODULE=on
 
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
