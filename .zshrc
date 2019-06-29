@@ -118,6 +118,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # zsh-autosuggestions
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# zsh-syntax-highlighting
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+
 # bash-complete
 if [ -f $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion ]; then
     . $(brew --prefix)/usr/local/opt/bash-completion/etc/bash_completion

@@ -128,7 +128,7 @@
     // less
     "less.compile": {
         "compress": true,
-        "sourceMap": true,
+        "sourceMap": true
     },
     "vs-kubernetes": {
         "vs-kubernetes.helm-path": "/Users/hongxchen/.vs-kubernetes/tools/helm/darwin-amd64/helm",
@@ -154,5 +154,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "vsicons.projectDetection.autoReload": true,
-    "go.useLanguageServer": true
+    // Golang
+    "go.useLanguageServer": true,
+    // JavaScript
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
