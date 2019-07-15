@@ -196,3 +196,6 @@ export NO_PROXY=localhost,127.0.0.1
 # depot_tools
 export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
 
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
