@@ -197,5 +197,8 @@ export NO_PROXY=localhost,127.0.0.1
 export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
 
 # rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
+export CARGO_HOME="$HOME/.cargo/"
+export RUSTBINPATH="$HOME/.cargo/bin"
+export RUST="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin"
+export RUST_SRC_PATH="$RUST/lib/rustlib/src/rust/src"
+export PATH=$RUSTBINPATH:$PATH
