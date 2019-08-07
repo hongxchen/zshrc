@@ -53,7 +53,9 @@
     // 配置文件关联，以便启用对应的智能提示，比如wxss使用css
     "files.associations": {
         "*.vue": "vue",
-        "*.wxss": "css"
+        "*.wxss": "css",
+        "*.cjson": "jsonc",
+        "*.wxs": "javascript"
     },
     // 配置emmet是否启用tab展开缩写
     "emmet.triggerExpansionOnTab": true,
@@ -69,7 +71,8 @@
     },
     // 在react的jsx中添加对emmet的支持
     "emmet.includeLanguages": {
-        "jsx-sublime-babel-tags": "javascriptreact"
+        "jsx-sublime-babel-tags": "javascriptreact",
+        "wxml": "html"
     },
     // 是否开启eslint检测
     "eslint.enable": false,
@@ -156,5 +159,6 @@
     // Golang
     "go.useLanguageServer": true,
     // JavaScript
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "minapp-vscode.disableAutoConfig": true
 }
