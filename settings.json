@@ -160,5 +160,11 @@
     "go.useLanguageServer": true,
     // JavaScript
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "minapp-vscode.disableAutoConfig": true
+    // minapp
+    "minapp-vscode.disableAutoConfig": true,
+    // Python
+    "python.jediEnabled": false,
+    // Java
+    "java.codeGeneration.generateComments": true,
+    "java.saveActions.organizeImports": true
 }

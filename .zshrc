@@ -202,3 +202,7 @@ export RUSTBINPATH="$HOME/.cargo/bin"
 export RUST="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin"
 export RUST_SRC_PATH="$RUST/lib/rustlib/src/rust/src"
 export PATH=$RUSTBINPATH:$PATH
+
+# openresty
+export PATH="/usr/local/opt/openresty-openssl/bin:$PATH"
+
