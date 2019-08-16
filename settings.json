@@ -166,5 +166,7 @@
     "python.jediEnabled": false,
     // Java
     "java.codeGeneration.generateComments": true,
-    "java.saveActions.organizeImports": true
+    "java.saveActions.organizeImports": true,
+    // C/C++
+    "C_Cpp.updateChannel": "Insiders"
 }
