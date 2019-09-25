@@ -156,6 +156,7 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "vsicons.projectDetection.autoReload": true,
+    "vsicons.dontShowNewVersionMessage": true,
     // Golang
     "go.useLanguageServer": true,
     // JavaScript
@@ -168,5 +169,6 @@
     "java.codeGeneration.generateComments": true,
     "java.saveActions.organizeImports": true,
     // C/C++
-    "C_Cpp.updateChannel": "Insiders"
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.clang_format_fallbackStyle": "Google"
 }
