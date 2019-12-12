@@ -137,8 +137,9 @@ fi
 export PATH="/usr/local/opt/ccache/libexec:$PATH"
 
 # Java
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-13.0.1.jdk/Contents/Home"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-7.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-13.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
@@ -155,7 +156,6 @@ export GOROOT="/usr/local/opt/go/libexec"
 export GOBIN="$HOME/Documents/Workspace/go/bin"
 export GOPATH="$HOME/Documents/Workspace/go"
 export PATH="$HOME/Documents/Workspace/go/bin:$PATH"
-export GO111MODULE=on
 
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"

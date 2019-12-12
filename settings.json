@@ -182,4 +182,7 @@
     },
     // typescript
     "typescript.updateImportsOnFileMove.enabled": "always",
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
 }
