@@ -139,7 +139,7 @@ export PATH="/usr/local/opt/ccache/libexec:$PATH"
 # Java
 #export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-7.jdk/Contents/Home"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-13.jdk/Contents/Home"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-14.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 

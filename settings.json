@@ -10,30 +10,11 @@
     "editor.formatOnPaste": true,
     "editor.suggestSelection": "first",
     "editor.largeFileOptimizations": false,
-    // formatter
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    // 禁用Open Editors
-    "explorer.openEditors.visible": 0,
     // 是否允许自定义的snippet片段提示,比如自定义的vue片段开启后就可以智能提示
     "editor.snippetSuggestions": "top",
+    // 禁用Open Editors
+    "explorer.openEditors.visible": 0,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Adapta Nokto",
-    "html.suggest.angular1": false,
-    "html.suggest.ionic": false,
     "files.trimTrailingWhitespace": true,
     // vscode 文件搜索区域配置
     "search.exclude": {
@@ -95,8 +76,6 @@
     },
     // 是否开启eslint检测
     "eslint.enable": false,
-    // 文件保存时，是否自动根据eslint进行格式化
-    "eslint.autoFixOnSave": false,
     // eslint配置文件
     "eslint.options": {
         "plugins": [
@@ -150,9 +129,6 @@
     },
     // intellicode
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    // vsicons
-    "vsicons.projectDetection.autoReload": true,
-    "vsicons.dontShowNewVersionMessage": true,
     // golang
     "go.useLanguageServer": true,
     // javascript
@@ -163,9 +139,11 @@
     "python.jediEnabled": false,
     "python.pythonPath": "/usr/local/bin/python3",
     // java
+    "java.home": "/Library/Java/JavaVirtualMachines/zulu-14.jdk/Contents/Home",
     "java.codeGeneration.generateComments": true,
     "java.saveActions.organizeImports": true,
     "java.errors.incompleteClasspath.severity": "ignore",
+    "java.semanticHighlighting.enabled": true,
     // c/c++
     "C_Cpp.updateChannel": "Insiders",
     "C_Cpp.clang_format_fallbackStyle": "Google",
@@ -174,16 +152,15 @@
     "leetcode.hint.configWebviewMarkdown": false,
     "leetcode.workspaceFolder": "/Users/hongxchen/.leetcode",
     "leetcode.defaultLanguage": "java",
-    // angular
-    "angularConsole.useNVM": false,
-    // less
-    "less.compile": {
-        "compress": true,
-        "sourceMap": true
-    },
     // typescript
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "[vue]": {
-        "editor.defaultFormatter": "octref.vetur"
-    }
+    // cmake
+    "cmake.configureOnOpen": true,
+    // todo-tree
+    "todo-tree.highlights.enabled": true,
+    "todo-tree.tree.showScanModeButton": false,
+    // leetcode
+    "leetcode.showDescription": "Both",
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.commentDescription": false
 }
