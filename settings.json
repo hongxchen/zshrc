@@ -15,6 +15,7 @@
     // 禁用Open Editors
     "explorer.openEditors.visible": 0,
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.iconTheme": "vscode-icons",
     "files.trimTrailingWhitespace": true,
     // vscode 文件搜索区域配置
     "search.exclude": {
@@ -144,6 +145,7 @@
     "java.saveActions.organizeImports": true,
     "java.errors.incompleteClasspath.severity": "ignore",
     "java.semanticHighlighting.enabled": true,
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/hongxchen/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
     // c/c++
     "C_Cpp.updateChannel": "Insiders",
     "C_Cpp.clang_format_fallbackStyle": "Google",
@@ -162,5 +164,12 @@
     // leetcode
     "leetcode.showDescription": "Both",
     "leetcode.hint.commandShortcut": false,
-    "leetcode.hint.commentDescription": false
+    "leetcode.hint.commentDescription": false,
+    // Formatter
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
