@@ -105,6 +105,7 @@ alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
 alias svn=colorsvn
 alias tree='tree -ah --du'
 alias ip='curl ip.cn'
+alias gf=gf
 
 # PATH
 eval $(/usr/libexec/path_helper -s)
@@ -205,4 +206,7 @@ export PATH=$RUSTBINPATH:$PATH
 
 # openresty
 export PATH="/usr/local/opt/openresty-openssl/bin:$PATH"
+
+# .NET Core SDK tools
+export PATH="$PATH:/Users/hongxchen/.dotnet/tools"
 

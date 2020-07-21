@@ -116,6 +116,8 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     // golang
     "go.useLanguageServer": true,
+    "go.formatTool": "goimports",
+    "go.autocompleteUnimportedPackages": true,
     // javascript
     "javascript.updateImportsOnFileMove.enabled": "always",
     // minapp
@@ -124,7 +126,7 @@
     "python.jediEnabled": false,
     "python.pythonPath": "/usr/local/bin/python3",
     // java
-    "java.home": "/Library/Java/JavaVirtualMachines/zulu-14.jdk/Contents/Home",
+    "java.home": "/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home",
     "java.codeGeneration.generateComments": true,
     "java.saveActions.organizeImports": true,
     "java.errors.incompleteClasspath.severity": "ignore",
@@ -154,5 +156,7 @@
     },
     "[vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    // Code Runner
+    "code-runner.runInTerminal": true,
 }
