@@ -159,4 +159,10 @@
     },
     // Code Runner
     "code-runner.runInTerminal": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    }
 }

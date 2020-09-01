@@ -140,7 +140,7 @@ export PATH="/usr/local/opt/ccache/libexec:$PATH"
 # Java
 #export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-7.jdk/Contents/Home"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home"
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-14.jdk/Contents/Home"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/zulu-11.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
 export CLASSPATH=".:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar"
 
@@ -190,9 +190,10 @@ export PATH="$HOME/Documents/Kits/flutter/bin:$PATH"
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 
 # proxy
-export HTTP_PROXY=http://localhost:8105
-export HTTPS_PROXY=http://localhost:8105
-export NO_PROXY=localhost,127.0.0.1
+#export all_proxy=http://127.0.0.1:19181
+#export http_proxy=http://127.0.0.1:19180
+#export https_proxy=http://127.0.0.1:19180
+#export no_proxy=localhost,127.0.0.1
 
 # depot_tools
 export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
