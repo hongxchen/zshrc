@@ -166,7 +166,7 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 #export ANDROID_NDK="/usr/local/Caskroom/android-sdk/3859397/ndk-bundle"
 #export PATH="$HOME/Documents/Workspace/urho3d/SDK/bin:$PATH"
 
-# mycli
+# Mycli
 export LESS="-RXF"
 
 # Qt
@@ -178,34 +178,35 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 # OpenSSL
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-# mysql
+# MySQL
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
-# flutter
+# Flutter
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export PATH="$HOME/Documents/Kits/flutter/bin:$PATH"
 
-# imgcat
+# Imgcat
 export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 
-# proxy
+# Proxy
 #export all_proxy=http://127.0.0.1:19181
 #export http_proxy=http://127.0.0.1:19180
 #export https_proxy=http://127.0.0.1:19180
 #export no_proxy=localhost,127.0.0.1
 
-# depot_tools
+# Depot_tools
 export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
 
-# rust
+# Rust
 export CARGO_HOME="$HOME/.cargo/"
 export RUSTBINPATH="$HOME/.cargo/bin"
 export RUST="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin"
 export RUST_SRC_PATH="$RUST/lib/rustlib/src/rust/src"
 export PATH=$RUSTBINPATH:$PATH
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 
-# openresty
+# OpenResty
 export PATH="/usr/local/opt/openresty-openssl/bin:$PATH"
 
 # .NET Core SDK tools
@@ -214,16 +215,16 @@ export PATH="$PATH:/Users/hongxchen/.dotnet/tools"
 # Conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+#__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+#        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
 # <<< conda initialize <<<
 
