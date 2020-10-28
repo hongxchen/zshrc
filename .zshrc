@@ -212,6 +212,9 @@ export PATH="/usr/local/opt/openresty-openssl/bin:$PATH"
 # .NET Core SDK tools
 export PATH="$PATH:/Users/hongxchen/.dotnet/tools"
 
+# .vcpkg
+export PATH="$HOME/Documents/Kits/vcpkg:$PATH"
+
 # Conda
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
