@@ -107,6 +107,9 @@ alias tree='tree -ah --du'
 alias ip='curl ip.cn'
 alias gf=gf
 
+# binutils
+export PATH="/usr/local/opt/binutils/bin:$PATH"
+
 # PATH
 eval $(/usr/libexec/path_helper -s)
 
