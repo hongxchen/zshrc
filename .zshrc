@@ -199,7 +199,7 @@ export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 #export no_proxy=localhost,127.0.0.1
 
 # Depot_tools
-export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
+#export PATH="$HOME/Documents/Kits/depot_tools:$PATH"
 
 # Rust
 export CARGO_HOME="$HOME/.cargo/"
