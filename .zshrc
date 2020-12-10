@@ -102,7 +102,6 @@ alias ls='gls --color=auto'
 #alias grep='ggrep --color=auto'
 alias cat='ccat'
 alias cpplint='$HOME/Documents/Kits/styleguide/cpplint/cpplint.py'
-alias svn=colorsvn
 alias tree='tree -ah --du'
 alias ip='curl ip.cn'
 alias gf=gf
@@ -204,10 +203,11 @@ export PATH="$HOME/Documents/Kits/zshrc:$PATH"
 # Rust
 export CARGO_HOME="$HOME/.cargo/"
 export RUSTBINPATH="$HOME/.cargo/bin"
-export RUST="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin"
+export RUST="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin"
 export RUST_SRC_PATH="$RUST/lib/rustlib/src/rust/src"
 export PATH=$RUSTBINPATH:$PATH
 export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+export CARGO_HTTP_MULTIPLEXING=false
 
 # OpenResty
 export PATH="/usr/local/opt/openresty-openssl/bin:$PATH"
@@ -217,20 +217,4 @@ export PATH="$PATH:/Users/hongxchen/.dotnet/tools"
 
 # .vcpkg
 export PATH="$HOME/Documents/Kits/vcpkg:$PATH"
-
-# Conda
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-#        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-# <<< conda initialize <<<
 
